@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="shortcut icon" type="img" href="icon.png" />
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Bevan' rel='stylesheet'>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light">
+        <a class="navbar-brand" id="logo" href="#">
+            <img id="imgLogo" src="logo.png" alt="Logo of page">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="mr-auto"></ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <form id="search" class="form-inline">
+                        <a href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+                        <input class="form-control form-control-sm" id="search-input" type="text" placeholder="Search">
+                    </form>
+                </li>
+                <li class="nav-item" id="sign-up">
+                    <a href="#">Đăng ký</a>
+                </li>
+                <li class="nav-item" id="sign-in">
+                    <button class="btn-hover btn-color nav-link">Đăng nhập</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container center" id="content">
+        <img id="gif-welcome" src="https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif" alt="Welcome">
+        <h1 id="fontOther">Thông tin cá nhân</h1>
+        <form action="#">
+            <div class="form-group">
+                <label id="fontOther" for="name">Tên:</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Tên đầy đủ">
+            </div>
+
+            <div class="form-group">
+                <label id="fontOther" for="birthday">Ngày sinh</label>
+                <input type="date" class="form-control" id="birthday" name="birthday" max="">
+            </div>
+
+            <div id="sex">
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" class="custom-control-input" id="nam" name="sex">
+                    <label class="custom-control-label" id="fontOther" for="nam">Nam</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" class="custom-control-input" id="nu" name="sex">
+                    <label class="custom-control-label" id="fontOther" for="nu">Nữ</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" class="custom-control-input" id="khac" name="sex">
+                    <label class="custom-control-label" id="fontOther" for="khac">Khác</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label id="fontOther" for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Địa chỉ email" name="email">
+            </div>
+            <div class="form-group">
+                <label id="fontOther" for="pwd">Mật khẩu:</label>
+                <input id="password-field" type="password" class="form-control" name="password" placeholder="Mật khẩu">
+                <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+            </div>
+
+            <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customCheck" name="rememberPass">
+                <label class="custom-control-label" id="fontOther" for="customCheck">Lưu mật khẩu</label>
+            </div>
+
+            <button type="submit" class="btn-hover btn-color" id="submit-btn">Gửi</button>
+        </form>
+    </div>
+
+    <!-- You can use the v-model directive to create two-way data bindings on form input, textarea, and select elements.
+    It automatically picks the correct way to update the element based on the input type. Although a bit magical,
+    v-model is essentially syntax sugar for updating data on user input events, plus special care for some edge
+    cases.
+
+    v-model will ignore the initial value, checked, or selected attributes found on any form elements. It will
+    always treat the Vue instance data as the source of truth. You should declare the initial value on the
+    JavaScript side, inside the data option of your component.
+
+    v-model internally uses different properties and emits different events for different input elements:
+
+    text and textarea elements use value property and input event;
+    checkboxes and radiobuttons use checked property and change event;
+    select fields use value as a prop and change as an event.
+    For languages that require an IME (Chinese, Japanese, Korean, etc.), you’ll notice that v-model doesn’t get
+    updated during IME composition. If you want to cater to these updates as well, use the input event instead.
+
+    Text
+    <input v-model="message" placeholder="edit me">
+    <p>Message is: {{ message }}</p>
+
+    Multiline text
+    <span>Multiline message is:</span>
+    <p style="white-space: pre-line;">{{ message }}</p>
+    <br>
+    <textarea v-model="message" placeholder="add multiple lines"></textarea>
+    Interpolation on textareas (<textarea>{{text}}</textarea>) won't work. Use v-model instead.
+    You can use the v-model directive to create two-way data bindings on form input, textarea, and select elements.
+    It automatically picks the correct way to update the element based on the input type. Although a bit magical,
+    v-model is essentially syntax sugar for updating data on user input events, plus special care for some edge
+    cases.
+
+    v-model will ignore the initial value, checked, or selected attributes found on any form elements. It will
+    always treat the Vue instance data as the source of truth. You should declare the initial value on the
+    JavaScript side, inside the data option of your component.
+
+    v-model internally uses different properties and emits different events for different input elements:
+
+    text and textarea elements use value property and input event;
+    checkboxes and radiobuttons use checked property and change event;
+    select fields use value as a prop and change as an event.
+    For languages that require an IME (Chinese, Japanese, Korean, etc.), you’ll notice that v-model doesn’t get
+    updated during IME composition. If you want to cater to these updates as well, use the input event instead. -->
+</body>
+<script src="main.js"></script>
+
+</html>

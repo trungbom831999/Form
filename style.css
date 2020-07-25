@@ -1,0 +1,179 @@
+a{
+    color: black;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+ul#nav{
+    list-style-type: none;
+    margin-top: 5px;
+}
+
+.center{
+    margin: auto;
+    width: 60%;
+}
+
+/* .right{
+    position: absolute;
+    right: 0;
+} */
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: white;
+}
+
+.btn-hover{
+    width: 100px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 15px;
+    height: auto;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.btn-color {
+    background-image: linear-gradient(
+      to right,
+      #25aae1,
+      #4481eb,
+      #04befe,
+      #3f86ed
+      );
+    box-shadow: 0 4px 5px 0 rgba(65, 132, 234, 0.75);
+}
+
+#fontOther{
+    font-family: 'Bevan';
+    font-size: 16px;
+}
+
+/* header */
+/* #header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 0 1px rgba(0,0,0,0.25);
+    background-color: white;
+    height: 60px;
+    z-index: 1000;
+} */
+nav{
+    /* background-color: white; */
+    border-bottom: 1px solid #ccc;
+}
+
+.navbar-nav{
+    margin-top: 10px;
+}
+
+#logo img{
+    margin-left: 20px;
+    height: 40px;
+}
+
+#nav{
+    position: fixed;
+    /* top: 10px; */
+    right: 25px;
+}
+
+#nav li{
+    display: inline-block;
+}
+
+#search-input{
+    border-radius: 15px;
+    max-width: 250px;
+    margin: 0 15px;
+}
+
+#sign-up{
+    /* text-align: center; */
+}
+
+#sign-in{
+    margin: 0;
+    /* position: absolute; */
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-15%);
+}
+
+/* content */
+#content{
+    /* margin-top: 50px; */
+}
+
+#gif-welcome{
+    margin-top: -50px;
+    height: 150px;
+    margin-left: 25%;
+}
+
+.field-icon {
+    float: right;
+    /* margin-left: -25px;*/
+    margin-top: -25px;
+    margin-right: 5px;
+    position: relative;
+    z-index: 2;
+  }
+
+#sex{
+    margin-bottom: 15px;
+}
+
+#submit-btn{
+    margin: 0;
+}
+
+@media(max-width: 767px){
+    .navbar{
+        padding-left: 0;
+    }
+
+    #sign-up{
+        /* margin-top: 5px;
+        margin-bottom: 15px; */
+        margin: 5px 0 15px 24px;
+    }
+
+    #search-input{
+        margin-left: 5px;
+    }
+
+    .navbar-collapse{
+        border-top: 1px solid #ccc!important;
+        /* border-bottom: 1px solid #ccc!important; */
+        padding-bottom: 3px;
+        padding-left: 15px;
+    }
+}
