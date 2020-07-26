@@ -129,7 +129,7 @@ nav{
 
 /* content */
 #content{
-    /* margin-top: 50px; */
+    margin-top: 20px;
 }
 
 #gif-welcome{
@@ -145,7 +145,17 @@ nav{
     margin-right: 5px;
     position: relative;
     z-index: 2;
-  }
+}
+
+#noti-phone{
+    display: none;
+    color: red;
+}
+
+#noti-rePass{
+    display: none;
+    color: red;
+}
 
 #sex{
     margin-bottom: 15px;
@@ -153,11 +163,12 @@ nav{
 
 #submit-btn{
     margin: 0;
+    margin-bottom: 10px;
 }
 
 @media(max-width: 767px){
     .navbar{
-        padding-left: 0;
+        padding: 10px 0;
     }
 
     #sign-up{
@@ -171,7 +182,7 @@ nav{
     }
 
     .navbar-collapse{
-        border-top: 1px solid #ccc!important;
+        /* border-top: 1px solid #ccc!important; */
         /* border-bottom: 1px solid #ccc!important; */
         padding-bottom: 3px;
         padding-left: 15px;
