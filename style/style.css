@@ -152,6 +152,12 @@ nav{
     color: red;
 }
 
+#noti-userName{
+    color: gray;
+    font-size: 15px;
+    font-style: italic;
+}
+
 #noti-rePass{
     display: none;
     color: red;
@@ -164,6 +170,12 @@ nav{
 #submit-btn{
     margin: 0;
     margin-bottom: 10px;
+}
+
+/* welcme */
+#welcome{
+    display: block;
+    margin: auto;
 }
 
 @media(max-width: 767px){

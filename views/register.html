@@ -1,0 +1,65 @@
+<div class="container center" id="content">
+    <h1 id="fontOther">Thông tin cá nhân</h1>
+    <form id="sign-up-form" action="#" method="POST">
+        <div class="form-group">
+            <label id="fontOther" for="name">Tên:</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Tên đầy đủ">
+        </div>
+
+        <div class="form-group">
+            <label id="fontOther" for="birthday">Ngày sinh</label>
+            <input type="date" class="form-control" id="birthday" name="birthday" max="">
+        </div>
+
+        <div id="sex">
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="nam" name="sex">
+                <label class="custom-control-label" id="fontOther" for="nam">Nam</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="nu" name="sex">
+                <label class="custom-control-label" id="fontOther" for="nu">Nữ</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="khac" name="sex">
+                <label class="custom-control-label" id="fontOther" for="khac">Khác</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label id="fontOther" for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Địa chỉ email" name="email"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        </div>
+
+        <div class="form-group">
+            <label id="fontOther" for="phone">Số điện thoại:</label>
+            <input type="tel" class="form-control" id="phone" name="phone" placeholder="">
+            <p id="noti-phone">Số điện thoại bắt đầu là 0 hoặc +84 và có 10 chữ số</p>
+        </div>
+
+        <div class="form-group">
+            <label id="fontOther" for="userName">Tên đăng nhập:</label>
+            <input type="text" class="form-control" id="userName" name="userName" placeholder="Tên đăng nhập" pattern="[a-zA-Z0-9]*" required>
+            <p id="noti-userName"> *Tên đăng nhập gồm chữ thường, chữ in hoa và số (không sử dụng dấu cách)</p>
+        </div>
+        <div class="form-group">
+            <label id="fontOther" for="password">Mật khẩu:</label>
+            <input id="password" type="password" class="form-control" name="password" placeholder="Mật khẩu" required>
+            <span toggle="#password" class="fa fa-fw fa-eye field-icon" id="show-pass"></span>
+        </div>
+        <div class="form-group">
+            <label id="fontOther" for="rePassword">Nhập lại mật khẩu:</label>
+            <input id="rePassword" type="password" class="form-control" name="rePassword" placeholder="Nhập lại mật khẩu">
+            <span toggle="#rePassword" class="fa fa-fw fa-eye field-icon" id="show-rePass"></span>
+            <p id="noti-rePass">Mật khẩu không trùng khớp</p>
+        </div>
+
+        <div class="custom-control custom-checkbox mb-3">
+            <input type="checkbox" class="custom-control-input" id="customCheck" name="rememberPass">
+            <label class="custom-control-label" id="fontOther" for="customCheck">Lưu mật khẩu</label>
+        </div>
+
+        <button type="submit" class="btn-hover btn-color" id="submit-btn">Đăng ký</button>
+    </form>
+</div>
